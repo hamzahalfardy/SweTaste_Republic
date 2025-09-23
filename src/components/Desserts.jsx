@@ -5,7 +5,7 @@ const Desserts = ({ addToCart, increaseQty, decreaseQty, cart }) => {
   const [goods, setGoods] = useState([])
 
   useEffect(() => {
-    fetch("/products.json")
+    fetch(`${import.meta.env.BASE_URL}products.json`)
       .then((res) => res.json())
       .then((data) => setGoods(data))
   }, [])
@@ -20,10 +20,13 @@ const Desserts = ({ addToCart, increaseQty, decreaseQty, cart }) => {
           // 🔍 Find this product inside the cart
           const cartItem = cart.find((c) => c.id === id)
 
+          // ✅ Fix image paths for GitHub Pages
+          const desktopImg = `${import.meta.env.BASE_URL}${image.desktop.replace(/^\//, "")}`
+
           return (
             <div key={id} className={styles.display}>
               <img
-                src={image.desktop}
+                src={desktopImg}
                 alt={name}
                 className="w-full h-40 object-cover rounded-lg"
               />
@@ -55,12 +58,12 @@ const Desserts = ({ addToCart, increaseQty, decreaseQty, cart }) => {
                 ) : (
                   // ✅ If product is NOT in cart, show Add to Cart
                   <button
-                    onClick={() => addToCart({ id, name, price,image })}
-                    className="bg-white font-bold text-lg font-sans text-black border border-gray-400 px-4 py-2 rounded-3xl my-3  flex justify-center items-center gap-2"
+                    onClick={() => addToCart({ id, name, price, image })}
+                    className="bg-white font-bold text-lg font-sans text-black border border-gray-400 px-4 py-2 rounded-3xl my-3 flex justify-center items-center gap-2"
                   >
                     <img
-                      src="/images/icon-add-to-cart.svg"
-                      alt="icon-add-to-cart"
+                      src={`${import.meta.env.BASE_URL}images/icon-add-to-cart.svg`}
+                      alt="icon "
                     />
                     Add to Cart
                   </button>
