@@ -48,7 +48,7 @@ const FoodLists = () => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id))
   }
 
-  // the clear cart after confirming button wasnt working properly
+  
   const clearCart = () => {
     setCart([])
   }

@@ -30,10 +30,11 @@ const Carts = ({ cart, removeItem, clearCart }) => {
       {cart.length === 0 ? (
         <div className="flex flex-col items-center">
           <img
-            src="/src/assets/images/illustration-empty-cart.svg"
-            alt="empty cart"
-            className="w-40 mb-2"
-          />
+          src="/images/illustration-empty-cart.svg"
+          alt="empty cart"
+          className="w-40 mb-2"
+        />
+
           <p className="text-gray-600">Items will appear here...</p>
         </div>
       ) : (
@@ -79,7 +80,7 @@ const Carts = ({ cart, removeItem, clearCart }) => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white rounded-xl p-6 shadow-lg text-center w-96">
             <img
-              src="/src/assets/images/icon-order-confirmed.svg"
+              src="/images/icon-order-confirmed.svg"
               alt="icon-order-confirmed"
               className="w-8"
             />
