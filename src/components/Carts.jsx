@@ -30,7 +30,7 @@ const Carts = ({ cart, removeItem, clearCart }) => {
       {cart.length === 0 ? (
         <div className="flex flex-col items-center">
           <img
-          src="/images/illustration-empty-cart.svg"
+          src="images/illustration-empty-cart.png"
           alt="empty cart"
           className="w-40 mb-2"
         />
