@@ -26,7 +26,7 @@ const PopUpOrders = ({orderSummary, closePopup}) => {
                   <div className="flex gap-2">
                     <img
                       src={item.image.thumbnail}
-                      alt=""}
+                      alt=""
                       className="w-10 h-10 rounded"
                     />
                     <div>
@@ -70,5 +70,6 @@ const PopUpOrders = ({orderSummary, closePopup}) => {
 }
 
 export default PopUpOrders
+
 
 
