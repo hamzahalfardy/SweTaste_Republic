@@ -4,7 +4,8 @@ const EmptyCart = () => {
   return (
     <div className="flex flex-col items-center">
           <img
-            src={`${import.meta.env.BASE_URL}images/illustration-empty-cart.svg`}
+            src={public/images/illustration-empty-cart.svg
+}
             alt="empty cart"
             className="w-40 mb-2"
           />
@@ -15,3 +16,4 @@ const EmptyCart = () => {
 }
 
 export default EmptyCart
+
