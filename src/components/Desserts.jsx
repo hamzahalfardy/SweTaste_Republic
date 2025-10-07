@@ -14,13 +14,13 @@ const Desserts = ({ addToCart, increaseQty, decreaseQty, cart }) => {
     <div className="flex flex-col justify-center items-center m-2">
       <h1 className="text-2xl font-extrabold font-mono">Desserts</h1>
 
-      {/* ✅ Grid layout for responsiveness */}
+      {/*  Grid layout for responsiveness */}
       <div className="mt-4 grid grid-cols-1 min-[550px]:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
         {goods.map(({ id, name, category, price, image }) => {
           // 🔍 Find this product inside the cart
           const cartItem = cart.find((c) => c.id === id)
 
-          // ✅ Fix image paths for GitHub Pages
+          //  Fix image paths for GitHub Pages
           const desktopImg = `${import.meta.env.BASE_URL}${image.desktop.replace(/^\//, "")}`
 
           return (
@@ -39,7 +39,7 @@ const Desserts = ({ addToCart, increaseQty, decreaseQty, cart }) => {
 
               <div className={styles.absolute}>
                 {cartItem ? (
-                  // ✅ If product is in cart, show +/– buttons
+                  //  If product is in cart, show +/– buttons
                   <div className="flex justify-between items-center bg-amber-600 border border-gray-400 px-4 py-2 rounded-3xl w-40 mb-3">
                     <button
                       onClick={() => decreaseQty(id)}
@@ -56,7 +56,7 @@ const Desserts = ({ addToCart, increaseQty, decreaseQty, cart }) => {
                     </button>
                   </div>
                 ) : (
-                  // ✅ If product is NOT in cart, show Add to Cart
+                  //  If product is NOT in cart, show Add to Cart
                   <button
                     onClick={() => addToCart({ id, name, price, image })}
                     className="bg-white font-bold text-lg font-sans text-black border border-gray-400 px-4 py-2 rounded-3xl my-3 flex justify-center items-center gap-2"
