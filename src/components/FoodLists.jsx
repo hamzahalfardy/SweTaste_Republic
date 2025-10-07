@@ -68,7 +68,7 @@ const FoodLists = () => {
 
       {/* Carts takes 30% on md+ screens and stays sticky */}
       <div className="w-full md:max-w-[30%] md:sticky md:top-4 self-start">
-        <Carts 
+        <Carts
         cart={cart}  
         removeItem={removeItem}
         clearCart={clearCart}/>
