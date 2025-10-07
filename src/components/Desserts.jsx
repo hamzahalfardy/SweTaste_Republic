@@ -5,7 +5,7 @@ const Desserts = ({ addToCart, increaseQty, decreaseQty, cart }) => {
   const [goods, setGoods] = useState([])
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}products.json`)
+    fetch(/products.json)
       .then((res) => res.json())
       .then((data) => setGoods(data))
   }, [])
